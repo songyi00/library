@@ -1,6 +1,6 @@
-package com.songyi.r2dbcstudy.book.adapter.persistence.entity
+package com.songyi.r2dbctutorial.book.adapter.persistence.entity
 
-import com.songyi.r2dbcstudy.book.domain.Book
+import com.songyi.r2dbctutorial.book.domain.Book
 import org.springframework.data.repository.kotlin.CoroutineCrudRepository
 import org.springframework.stereotype.Repository
 

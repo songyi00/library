@@ -1,6 +1,6 @@
-package com.songyi.r2dbcstudy.book.port.out
+package com.songyi.r2dbctutorial.book.port.out
 
-import com.songyi.r2dbcstudy.book.domain.Book
+import com.songyi.r2dbctutorial.book.domain.Book
 
 interface BookCommandPort {
     fun save(book: Book): Book

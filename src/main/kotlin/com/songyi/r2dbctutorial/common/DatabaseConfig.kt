@@ -1,6 +1,6 @@
-package com.songyi.r2dbcstudy.common
+package com.songyi.r2dbctutorial.common
 
-import com.songyi.r2dbcstudy.R2dbcStudyApplication
+import com.songyi.r2dbctutorial.R2dbcStudyApplication
 import io.r2dbc.spi.ConnectionFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

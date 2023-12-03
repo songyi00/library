@@ -1,7 +1,7 @@
-package com.songyi.r2dbcstudy.book.adapter.persistence
+package com.songyi.r2dbctutorial.book.adapter.persistence
 
-import com.songyi.r2dbcstudy.book.domain.Book
-import com.songyi.r2dbcstudy.book.port.out.BookCommandPort
+import com.songyi.r2dbctutorial.book.domain.Book
+import com.songyi.r2dbctutorial.book.port.out.BookCommandPort
 import org.springframework.stereotype.Component
 
 @Component

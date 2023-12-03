@@ -1,4 +1,4 @@
-package com.songyi.r2dbcstudy
+package com.songyi.r2dbctutorial
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

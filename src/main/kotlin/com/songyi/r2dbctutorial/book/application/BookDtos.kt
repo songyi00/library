@@ -1,6 +1,6 @@
-package com.songyi.r2dbcstudy.book.application
+package com.songyi.r2dbctutorial.book.application
 
-import com.songyi.r2dbcstudy.book.domain.Book
+import com.songyi.r2dbctutorial.book.domain.Book
 import java.time.LocalDateTime
 
 data class BookData(

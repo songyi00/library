@@ -1,4 +1,4 @@
-package com.songyi.r2dbcstudy.book.adapter.persistence.entity
+package com.songyi.r2dbctutorial.book.adapter.persistence.entity
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table
