@@ -2,13 +2,10 @@ package com.songyi.r2dbcstudy
 
 import com.songyi.r2dbcstudy.book.application.BookData
 import com.songyi.r2dbcstudy.book.application.BookService
-import com.songyi.r2dbcstudy.book.domain.BookRepository
+import com.songyi.r2dbcstudy.book.adapter.persistence.entity.BookRepository
 import com.songyi.r2dbcstudy.config.IntegrationTest
-import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
-import io.kotest.matchers.shouldNotBe
-import kotlinx.coroutines.flow.toList
 
 @IntegrationTest
 class BookServiceTest(

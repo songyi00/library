@@ -1,15 +1,15 @@
-package com.songyi.r2dbcstudy.book.domain
+package com.songyi.r2dbcstudy.book.adapter.persistence.entity
 
-import com.songyi.r2dbcstudy.book.domain.vo.ISBN
 import org.springframework.data.annotation.Id
-import org.springframework.data.relational.core.mapping.Embedded
 import org.springframework.data.relational.core.mapping.Table
 import java.time.LocalDateTime
 
-class Book(
+@Table("book")
+class BookEntity(
+    @Id
     val id: Long = 0L,
     val name: String,
     val author: String,
-    val isbn: ISBN,
+    val isbn: Long,
     val publishedTime: LocalDateTime
 )

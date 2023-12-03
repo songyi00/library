@@ -1,5 +1,7 @@
 CREATE TABLE IF NOT EXISTS BOOK(
-    ID      SERIAL          PRIMARY KEY,
-    NAME    VARCHAR(50)     NOT NULL,
-    AUTHOR  VARCHAR(50)     NOT NULL
+    id              serial          PRIMARY KEY,
+    name            varchar(50)     NOT NULL,
+    author          varchar(50)     NOT NULL,
+    isbn            long            NOT NULL,
+    published_time  timestamp       NOT NULL
 );
