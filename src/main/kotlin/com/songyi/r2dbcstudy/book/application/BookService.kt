@@ -1,17 +1,17 @@
-package com.songyi.r2dbcstudy
+package com.songyi.r2dbcstudy.book.application
 
-import com.songyi.r2dbcstudy.application.BookData
-import com.songyi.r2dbcstudy.application.BookResponse
-import com.songyi.r2dbcstudy.domain.Book
-import com.songyi.r2dbcstudy.domain.BookRepository
+import com.songyi.r2dbcstudy.book.application.BookData
+import com.songyi.r2dbcstudy.book.application.BookResponse
+import com.songyi.r2dbcstudy.book.domain.Book
+import com.songyi.r2dbcstudy.book.domain.BookRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
+import java.lang.IllegalArgumentException
 
 @Service
 class BookService(
     private val bookRepository: BookRepository
 ) {
-
     @Transactional
     suspend fun register(request: BookData): BookResponse {
         val book = bookRepository.save(

@@ -1,6 +1,6 @@
-package com.songyi.r2dbcstudy.application
+package com.songyi.r2dbcstudy.book.application
 
-import com.songyi.r2dbcstudy.domain.Book
+import com.songyi.r2dbcstudy.book.domain.Book
 
 data class BookData(
     val name: String,

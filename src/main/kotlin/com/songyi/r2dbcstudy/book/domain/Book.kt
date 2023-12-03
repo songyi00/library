@@ -1,4 +1,4 @@
-package com.songyi.r2dbcstudy.domain
+package com.songyi.r2dbcstudy.book.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table

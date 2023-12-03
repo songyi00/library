@@ -37,7 +37,7 @@ dependencies {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
         exclude(group = "org.mockito")
     }
-//    testImplementation("com.ninja-squad:springmockk:2.0.3")
+    testImplementation("com.ninja-squad:springmockk:4.0.2")
     testImplementation("io.kotest:kotest-framework-engine-jvm:5.7.2")
     testImplementation("io.kotest.extensions:kotest-extensions-spring:1.1.3")
 }
