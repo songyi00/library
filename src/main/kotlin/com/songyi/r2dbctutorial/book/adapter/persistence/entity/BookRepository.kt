@@ -1,8 +1,11 @@
 package com.songyi.r2dbctutorial.book.adapter.persistence.entity
 
-import com.songyi.r2dbctutorial.book.domain.Book
 import org.springframework.data.repository.kotlin.CoroutineCrudRepository
 import org.springframework.stereotype.Repository
 
+suspend fun BookRepository.getById(bookId: Long): BookEntity {
+    return findById(bookId) ?: throw IllegalArgumentException("존재하지 않는 book입니다. [id: $bookId]")
+}
+
 @Repository
-interface BookRepository : CoroutineCrudRepository<Book, Long>
+interface BookRepository : CoroutineCrudRepository<BookEntity, Long>

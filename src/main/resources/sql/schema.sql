@@ -9,4 +9,4 @@ create table if not exists book
     current_stock  integer,
     total_stock    integer,
     published_date timestamp
-);
+    );

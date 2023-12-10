@@ -3,3 +3,16 @@ spring:
     url: r2dbc:postgresql://localhost:5432/study
     username: test
     password: test
+  sql:
+    init:
+      mode: always
+      data-locations:
+        - classpath:sql/insert.sql
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+    io.r2dbc.postgresql.QUERY: debug
