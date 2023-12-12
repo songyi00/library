@@ -1,4 +1,4 @@
-package com.songyi.r2dbctutorial.book.adapter.persistence.entity
+package com.songyi.r2dbctutorial.book.adapter.out.persistence.entity
 
 import com.songyi.r2dbctutorial.book.domain.Book
 import com.songyi.r2dbctutorial.book.domain.BookStatus

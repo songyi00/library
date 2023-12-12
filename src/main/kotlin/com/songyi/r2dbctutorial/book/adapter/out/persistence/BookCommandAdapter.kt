@@ -1,14 +1,13 @@
-package com.songyi.r2dbctutorial.book.adapter.persistence
+package com.songyi.r2dbctutorial.book.adapter.out.persistence
 
-import com.songyi.r2dbctutorial.book.adapter.persistence.entity.BookEntity
-import com.songyi.r2dbctutorial.book.adapter.persistence.entity.BookRepository
-import com.songyi.r2dbctutorial.book.adapter.persistence.entity.getById
+import com.songyi.r2dbctutorial.book.adapter.out.persistence.entity.BookEntity
+import com.songyi.r2dbctutorial.book.adapter.out.persistence.entity.BookRepository
+import com.songyi.r2dbctutorial.book.adapter.out.persistence.entity.getById
 import com.songyi.r2dbctutorial.book.domain.Book
 import com.songyi.r2dbctutorial.book.port.out.BookCommandPort
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.toList
 import org.springframework.stereotype.Component
 
 @Component
