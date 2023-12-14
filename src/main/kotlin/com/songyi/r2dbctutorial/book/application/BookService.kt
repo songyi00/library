@@ -9,6 +9,8 @@ import com.songyi.r2dbctutorial.book.port.`in`.RegisterBookUseCase.BookData
 import com.songyi.r2dbctutorial.book.port.`in`.UpdateStockUseCase
 import com.songyi.r2dbctutorial.book.port.out.BookCommandPort
 import com.songyi.r2dbctutorial.book.port.out.BookQueryPort
+import mu.KotlinLogging
+import org.springframework.dao.OptimisticLockingFailureException
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -17,6 +19,9 @@ class BookService(
     private val bookCommandPort: BookCommandPort,
     private val bookQueryPort: BookQueryPort
 ) : RegisterBookUseCase, UpdateStockUseCase, DeleteBookUseCase {
+
+    private val logger = KotlinLogging.logger {}
+
     @Transactional
     override suspend fun registerBook(request: BookData): Book {
         return bookCommandPort.save(
@@ -33,9 +38,14 @@ class BookService(
 
     @Transactional
     override suspend fun updateStock(stockData: UpdateStockUseCase.StockData): Book {
-        val book = bookQueryPort.loadBook(stockData.bookId)
-        book.updateStock(stockData.rentedCount)
-        return bookCommandPort.update(book)
+        return try {
+            val book = bookQueryPort.loadBook(stockData.bookId)
+            book.updateStock(stockData.rentedCount)
+            bookCommandPort.update(book)
+        } catch (e: OptimisticLockingFailureException) {
+            logger.warn { "optimistic locking failure in updateStock [stockData: $stockData]" }
+            updateStock(stockData)
+        }
     }
 
     @Transactional
