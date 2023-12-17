@@ -47,8 +47,6 @@ class BookIntegrationTest(
         }
     }
 
-
-
     Given("재고 변경이 필요한 경우") {
         val book = bookRepository.save(createBookEntity(totalStock = 5))
         val request = UpdateStockUseCase.StockData(
