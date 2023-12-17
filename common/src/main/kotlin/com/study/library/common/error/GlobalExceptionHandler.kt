@@ -1,4 +1,4 @@
-package com.study.library.book.common.error
+package com.study.library.common.error
 
 import org.springframework.boot.autoconfigure.web.WebProperties
 import org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler
