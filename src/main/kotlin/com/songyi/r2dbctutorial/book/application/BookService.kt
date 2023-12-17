@@ -1,7 +1,6 @@
 package com.songyi.r2dbctutorial.book.application
 
 import com.songyi.r2dbctutorial.book.domain.Book
-import com.songyi.r2dbctutorial.book.domain.BookStatus
 import com.songyi.r2dbctutorial.book.domain.vo.ISBN
 import com.songyi.r2dbctutorial.book.port.`in`.DeleteBookUseCase
 import com.songyi.r2dbctutorial.book.port.`in`.RegisterBookUseCase

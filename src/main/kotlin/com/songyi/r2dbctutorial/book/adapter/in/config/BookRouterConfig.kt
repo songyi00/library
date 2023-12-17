@@ -15,7 +15,7 @@ class BookRouterConfig(
     fun routes(): RouterFunction<*> = coRouter {
         accept(MediaType.APPLICATION_JSON).nest {
             POST("/api/books", bookRouter::registerBook)
-            DELETE("/api/books/{bookId}",bookRouter::deleteBook)
+            DELETE("/api/books/{bookId}", bookRouter::deleteBook)
         }
     }
 }

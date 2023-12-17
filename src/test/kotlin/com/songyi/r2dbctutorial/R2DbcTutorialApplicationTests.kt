@@ -9,5 +9,4 @@ class R2DbcTutorialApplicationTests {
     @Test
     fun contextLoads() {
     }
-
 }

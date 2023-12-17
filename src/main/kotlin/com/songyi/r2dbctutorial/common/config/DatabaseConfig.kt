@@ -17,8 +17,8 @@ class DatabaseConfig {
     fun initializer(connectionFactory: ConnectionFactory): ConnectionFactoryInitializer {
         val initializer = ConnectionFactoryInitializer()
         val resourceDatabasePopulator = ResourceDatabasePopulator(ClassPathResource("sql/schema.sql"))
-        initializer.setConnectionFactory(connectionFactory);
-        initializer.setDatabasePopulator(resourceDatabasePopulator);
-        return initializer;
+        initializer.setConnectionFactory(connectionFactory)
+        initializer.setDatabasePopulator(resourceDatabasePopulator)
+        return initializer
     }
 }
