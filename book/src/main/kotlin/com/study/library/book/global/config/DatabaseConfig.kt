@@ -1,4 +1,4 @@
-package com.study.library.book.common.config
+package com.study.library.book.global.config
 
 import com.study.library.book.BookApplication
 import io.r2dbc.spi.ConnectionFactory
