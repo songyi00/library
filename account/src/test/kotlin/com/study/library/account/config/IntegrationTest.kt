@@ -1,4 +1,4 @@
-package com.songyi.r2dbctutorial.config
+package com.study.library.account.config
 
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.ActiveProfiles

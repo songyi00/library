@@ -1,0 +1,15 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/study
+    username: test
+    password: test
+
+logging:
+  level:
+    org:
+      springframework:
+        r2dbc: DEBUG
+
+jwt:
+  secret-key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  expiration-in-milliseconds: 21600000
