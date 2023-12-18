@@ -42,6 +42,12 @@ class GlobalExceptionHandler(
                     .bodyValue(ErrorResponse(HttpStatus.BAD_REQUEST.value(), e.message ?: e.stackTraceToString()))
             }
 
+            is NotFoundException -> {
+                ServerResponse.status(HttpStatusCode.valueOf(404))
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .bodyValue(ErrorResponse(HttpStatus.NOT_FOUND.value(), e.message ?: e.stackTraceToString()))
+            }
+
             else -> {
                 ServerResponse.status(HttpStatusCode.valueOf(500))
                     .contentType(MediaType.APPLICATION_JSON)
