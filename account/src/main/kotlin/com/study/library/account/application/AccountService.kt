@@ -11,8 +11,10 @@ import com.study.library.common.auth.JwtToken
 import com.study.library.common.auth.JwtTokenManager
 import com.study.library.common.error.AccountNotFoundException
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
+@Transactional
 class AccountService(
     private val accountCommandPort: AccountCommandPort,
     private val accountQueryPort: AccountQueryPort,
