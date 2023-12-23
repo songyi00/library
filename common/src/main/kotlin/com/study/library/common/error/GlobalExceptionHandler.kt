@@ -48,6 +48,12 @@ class GlobalExceptionHandler(
                     .bodyValue(ErrorResponse(HttpStatus.NOT_FOUND.value(), e.message ?: e.stackTraceToString()))
             }
 
+            is ForbiddenException -> {
+                ServerResponse.status(HttpStatusCode.valueOf(403))
+                    .contentType(MediaType.APPLICATION_JSON)
+                    .bodyValue(ErrorResponse(HttpStatus.FORBIDDEN.value(), e.message ?: e.stackTraceToString()))
+            }
+
             else -> {
                 ServerResponse.status(HttpStatusCode.valueOf(500))
                     .contentType(MediaType.APPLICATION_JSON)

@@ -7,8 +7,8 @@ interface AuthenticateUseCase {
     suspend fun authenticate(authenticationData: AuthenticationData): JwtToken
 
     data class AuthenticationData(
-        val email: String,
         @Email
+        val email: String,
         val password: String
     )
 }

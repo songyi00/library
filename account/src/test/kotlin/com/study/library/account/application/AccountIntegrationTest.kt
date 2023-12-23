@@ -2,7 +2,8 @@ package com.study.library.account.application
 
 import com.study.library.account.adapter.out.persistence.repository.AccountRepository
 import com.study.library.account.config.IntegrationTest
-import com.study.library.account.domain.Password
+import com.study.library.account.fixture.EMAIL
+import com.study.library.account.fixture.PASSWORD
 import com.study.library.account.fixture.createAccountEntity
 import com.study.library.account.port.`in`.AuthenticateUseCase.AuthenticationData
 import com.study.library.common.error.AccountNotFoundException
@@ -24,9 +25,9 @@ class AccountIntegrationTest(
     context("로그인") {
         test("정상적인 사용자인 경우 토큰을 발행한다.") {
             // given
-            val account = accountRepository.save(createAccountEntity())
+            accountRepository.save(createAccountEntity(email = EMAIL, password = PASSWORD))
             // when
-            val actual = accountService.authenticate(AuthenticationData(account.email, account.password))
+            val actual = accountService.authenticate(AuthenticationData(EMAIL, PASSWORD))
 
             // then
             actual.token shouldNotBe ""
@@ -44,7 +45,7 @@ class AccountIntegrationTest(
 
         test("비밀번호가 잘못된 경우 예외가 발생한다.") {
             // given
-            val account = accountRepository.save(createAccountEntity(password = Password("aa")))
+            val account = accountRepository.save(createAccountEntity(password = "aa"))
 
             // when, then
             shouldThrow<UnAuthenticateException> {

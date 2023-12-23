@@ -2,6 +2,7 @@ package com.study.library.book.book.adapter.`in`
 
 import com.study.library.book.book.port.`in`.DeleteBookUseCase
 import com.study.library.book.book.port.`in`.RegisterBookUseCase
+import com.study.library.common.auth.USER_DETAILS
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -19,6 +20,8 @@ class BookRouter(
     suspend fun registerBook(request: ServerRequest): ServerResponse {
         val bookData = request.awaitBody<RegisterBookUseCase.BookData>()
         val response = registerBookUseCase.registerBook(bookData)
+
+        println("hi: " + request.attribute(USER_DETAILS))
 
         return ServerResponse.created(
             URI.create("/api/books/${response.id}")

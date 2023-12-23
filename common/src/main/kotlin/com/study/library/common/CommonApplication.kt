@@ -1,7 +1,11 @@
 package com.study.library.common
 
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.boot.runApplication
 
+@ConfigurationPropertiesScan
+@SpringBootApplication
 class CommonApplication
 
 fun main(args: Array<String>) {

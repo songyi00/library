@@ -1,7 +1,6 @@
 package com.study.library.account.adapter.out.persistence.entity
 
 import com.study.library.account.domain.Account
-import com.study.library.account.domain.Password
 import org.springframework.data.relational.core.mapping.Table
 
 @Table("account")
@@ -15,7 +14,7 @@ class AccountEntity(
         return Account(
             id = id,
             email = email,
-            password = Password(password),
+            password = password,
             name = name
         )
     }
@@ -25,7 +24,7 @@ class AccountEntity(
             return AccountEntity(
                 id = account.id,
                 email = account.email,
-                password = account.password.encryptValue,
+                password = account.password,
                 name = account.name
             )
         }

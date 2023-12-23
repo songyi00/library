@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/account" />
             <option value="$PROJECT_DIR$/book" />
             <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/gateway" />
           </set>
         </option>
       </GradleProjectSettings>

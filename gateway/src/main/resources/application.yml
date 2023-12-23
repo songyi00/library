@@ -1,0 +1,3 @@
+jwt:
+  expiration-in-milliseconds: 100000000
+  secret-key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa

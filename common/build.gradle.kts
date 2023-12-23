@@ -31,6 +31,15 @@ dependencies {
     implementation("io.jsonwebtoken:jjwt-api:0.11.5")
     runtimeOnly("io.jsonwebtoken:jjwt-impl:0.11.5")
     runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.11.5")
+
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.0")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test") {
+        exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+        exclude(group = "org.mockito")
+    }
+    testImplementation("io.kotest:kotest-runner-junit5:5.7.2")
+
 }
 
 tasks.withType<KotlinCompile> {
