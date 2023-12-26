@@ -8,15 +8,10 @@ import org.springframework.stereotype.Component
 import org.springframework.web.server.ServerWebExchange
 
 @Component
-open class AuthorizationGatewayFilterFactory(
+class AuthorizationGatewayFilterFactory(
     private val tokenManager: JwtTokenManager
 ) : AbstractGatewayFilterFactory<AuthorizationGatewayFilterFactory.Config>(Config::class.java) {
     override fun apply(config: Config): GatewayFilter = GatewayFilter { exchange, chain ->
-        if (exchange.request.uri.path.startsWith("/api/signUp")
-            || exchange.request.uri.path.startsWith("/api/signIn")
-        ) {
-            return@GatewayFilter chain.filter(exchange)
-        }
 
         val token = extractTokenString(exchange)
         val email = tokenManager.getUserEmail(token)
