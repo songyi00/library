@@ -1,10 +1,10 @@
 package com.study.library.book.application
 
 import com.study.library.book.fixture.createBook
-import com.study.library.book.book.application.BookService
-import com.study.library.book.book.port.`in`.RegisterBookUseCase
-import com.study.library.book.book.port.out.BookCommandPort
-import com.study.library.book.book.port.out.BookQueryPort
+import com.study.library.book.application.BookService
+import com.study.library.book.port.`in`.RegisterBookUseCase
+import com.study.library.book.port.out.BookCommandPort
+import com.study.library.book.port.out.BookQueryPort
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe
 import io.mockk.clearAllMocks

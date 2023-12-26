@@ -2,12 +2,14 @@ package com.study.library.common.error
 
 import org.springframework.boot.autoconfigure.web.WebProperties
 import org.springframework.boot.autoconfigure.web.reactive.error.AbstractErrorWebExceptionHandler
+import org.springframework.boot.web.reactive.error.DefaultErrorAttributes
 import org.springframework.boot.web.reactive.error.ErrorAttributes
 import org.springframework.context.ApplicationContext
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode
 import org.springframework.http.MediaType
 import org.springframework.http.codec.ServerCodecConfigurer
+import org.springframework.http.codec.support.DefaultServerCodecConfigurer
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.RouterFunction
 import org.springframework.web.reactive.function.server.RequestPredicates
@@ -19,9 +21,9 @@ import reactor.core.publisher.Mono
 
 @Component
 class GlobalExceptionHandler(
-    errorAttributes: ErrorAttributes,
+    errorAttributes: ErrorAttributes = DefaultErrorAttributes(),
     applicationContext: ApplicationContext,
-    serverCodecConfigurer: ServerCodecConfigurer
+    serverCodecConfigurer: ServerCodecConfigurer = DefaultServerCodecConfigurer()
 ) : AbstractErrorWebExceptionHandler(errorAttributes, WebProperties.Resources(), applicationContext) {
     init {
         super.setMessageWriters(serverCodecConfigurer.writers)

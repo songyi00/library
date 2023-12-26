@@ -1,9 +1,9 @@
 package com.study.library.book.application
 
-import com.study.library.book.book.adapter.out.persistence.entity.BookRepository
-import com.study.library.book.book.application.BookService
-import com.study.library.book.book.domain.BookStatus
-import com.study.library.book.book.port.`in`.UpdateStockUseCase
+import com.study.library.book.adapter.out.persistence.entity.BookRepository
+import com.study.library.book.application.BookService
+import com.study.library.book.domain.BookStatus
+import com.study.library.book.port.`in`.UpdateStockUseCase
 import com.study.library.book.global.config.IntegrationTest
 import com.study.library.book.fixture.createBookData
 import com.study.library.book.fixture.createBookEntity

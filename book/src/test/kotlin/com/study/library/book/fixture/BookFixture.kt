@@ -1,11 +1,11 @@
 package com.study.library.book.fixture
 
-import com.study.library.book.book.adapter.out.persistence.entity.BookEntity
-import com.study.library.book.book.domain.Book
-import com.study.library.book.book.domain.BookStatus
-import com.study.library.book.book.domain.Source
-import com.study.library.book.book.domain.vo.ISBN
-import com.study.library.book.book.port.`in`.RegisterBookUseCase
+import com.study.library.book.adapter.out.persistence.entity.BookEntity
+import com.study.library.book.domain.Book
+import com.study.library.book.domain.BookStatus
+import com.study.library.book.domain.Source
+import com.study.library.book.domain.vo.ISBN
+import com.study.library.book.port.`in`.RegisterBookUseCase
 import java.time.LocalDateTime
 
 const val NAME = "clean code"

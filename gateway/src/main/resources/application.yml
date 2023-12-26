@@ -1,3 +1,24 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id : account-service
+          uri: http://127.0.0.1:8081
+          predicates:
+            - Path=/account-service/api/**
+          filters:
+            - RewritePath=/account-service/(?<segment>.*), /$\{segment}
+        - id: book-service
+          uri: http://127.0.0.1:8082
+          predicates:
+            - Path=/book-service/api/**
+          filters:
+            - Authorization
+            - RewritePath=/book-service/(?<segment>.*), /$\{segment}
+
+server:
+  port: 8080
+
 jwt:
   expiration-in-milliseconds: 100000000
   secret-key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
