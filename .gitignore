@@ -741,3 +741,4 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 !**/mapnik-jni.jar
+.DS_Store
