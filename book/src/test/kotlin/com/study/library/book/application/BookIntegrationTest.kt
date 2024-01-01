@@ -1,7 +1,6 @@
 package com.study.library.book.application
 
 import com.study.library.book.adapter.out.persistence.entity.BookRepository
-import com.study.library.book.application.BookService
 import com.study.library.book.domain.BookStatus
 import com.study.library.book.port.`in`.UpdateStockUseCase
 import com.study.library.book.global.config.IntegrationTest

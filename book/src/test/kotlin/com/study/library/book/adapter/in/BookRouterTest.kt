@@ -2,7 +2,6 @@ package com.study.library.book.adapter.`in`
 
 import com.ninjasquad.springmockk.MockkBean
 import com.study.library.book.fixture.createBook
-import com.study.library.book.adapter.`in`.BookRouter
 import com.study.library.book.adapter.`in`.config.BookRouterConfig
 import com.study.library.book.domain.Book
 import com.study.library.book.port.`in`.DeleteBookUseCase

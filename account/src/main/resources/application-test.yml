@@ -9,7 +9,3 @@ logging:
     org:
       springframework:
         r2dbc: DEBUG
-
-jwt:
-  secret-key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-  expiration-in-milliseconds: 21600000

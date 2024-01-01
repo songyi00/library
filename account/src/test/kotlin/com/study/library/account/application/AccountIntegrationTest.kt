@@ -1,7 +1,6 @@
 package com.study.library.account.application
 
 import com.study.library.account.adapter.out.persistence.repository.AccountRepository
-import com.study.library.account.application.AccountService
 import com.study.library.account.config.IntegrationTest
 import com.study.library.account.fixture.EMAIL
 import com.study.library.account.fixture.PASSWORD
