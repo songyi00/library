@@ -5,19 +5,23 @@ import io.jsonwebtoken.Jws
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.security.Keys
 import mu.KotlinLogging
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
 import java.util.*
 import javax.crypto.SecretKey
 
 class JwtTokenManager(
-    private val jwtProperties: JwtProperties
+    @Value("\${jwt.secret-key}") val secretKey: String,
+    @Value("\${jwt.expiration-in-milliseconds}") val expirationInMilliseconds: Long,
 ) {
 
     private val logger = KotlinLogging.logger {}
-    private val secretKeyEncoded: SecretKey = Keys.hmacShaKeyFor(jwtProperties.secretKey.toByteArray())
+    private val secretKeyEncoded: SecretKey = Keys.hmacShaKeyFor(secretKey.toByteArray())
 
     fun createAccessToken(email: String): JwtToken {
         val now = Date()
-        val expirationTime = now.time + jwtProperties.expirationInMilliseconds
+        val expirationTime = now.time + expirationInMilliseconds
         val claims = Jwts.claims().setSubject(email)
 
         return JwtToken(

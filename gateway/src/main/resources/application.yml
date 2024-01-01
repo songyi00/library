@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    include: common
   cloud:
     gateway:
       routes:
@@ -19,6 +21,3 @@ spring:
 server:
   port: 8080
 
-jwt:
-  expiration-in-milliseconds: 100000000
-  secret-key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
