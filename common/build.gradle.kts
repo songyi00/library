@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
     id("org.springframework.boot") version "3.2.0"
@@ -17,6 +18,14 @@ java {
 
 repositories {
     mavenCentral()
+}
+
+tasks.getByName<BootJar>("bootJar") {
+    enabled = false
+}
+
+tasks.getByName<Jar>("jar") {
+    enabled = true
 }
 
 dependencies {
@@ -39,7 +48,6 @@ dependencies {
         exclude(group = "org.mockito")
     }
     testImplementation("io.kotest:kotest-runner-junit5:5.7.2")
-
 }
 
 tasks.withType<KotlinCompile> {
