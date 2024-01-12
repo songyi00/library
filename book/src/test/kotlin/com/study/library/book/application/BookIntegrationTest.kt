@@ -2,10 +2,10 @@ package com.study.library.book.application
 
 import com.study.library.book.adapter.out.persistence.entity.BookRepository
 import com.study.library.book.domain.BookStatus
-import com.study.library.book.port.`in`.UpdateStockUseCase
-import com.study.library.book.global.config.IntegrationTest
 import com.study.library.book.fixture.createBookData
 import com.study.library.book.fixture.createBookEntity
+import com.study.library.book.port.`in`.UpdateStockUseCase
+import com.study.library.common.annotation.IntegrationTest
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.BehaviorSpec
 import io.kotest.matchers.shouldBe

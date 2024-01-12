@@ -21,6 +21,7 @@ repositories {
 
 dependencies {
     implementation(project(":common"))
+    testImplementation(testFixtures(project(":common")))
 
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-webflux")

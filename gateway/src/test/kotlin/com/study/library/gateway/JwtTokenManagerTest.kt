@@ -10,7 +10,7 @@ import io.kotest.matchers.shouldBe
 
 class JwtTokenManagerTest : FunSpec({
     val tokenManager: JwtTokenManager by lazy {
-        JwtTokenManager(JwtProperties(SECRET_KEY, EXPIRATION_TIME_MS))
+        JwtTokenManager(SECRET_KEY, EXPIRATION_TIME_MS)
     }
     test("토큰을 생성하고 정보를 추출할 수 있다.") {
         // given
