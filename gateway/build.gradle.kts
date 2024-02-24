@@ -21,7 +21,7 @@ repositories {
 extra["springCloudVersion"] = "2023.0.0"
 
 dependencies {
-	implementation(project(":common"))
+	implementation(project(":core:auth"))
 
 	implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")

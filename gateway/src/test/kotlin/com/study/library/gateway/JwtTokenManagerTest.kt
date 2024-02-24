@@ -1,7 +1,6 @@
 package com.study.library.gateway
 
-import com.study.library.common.auth.JwtProperties
-import com.study.library.common.auth.JwtTokenManager
+import com.study.library.core.auth.auth.JwtTokenManager
 import com.study.library.gateway.fixture.EMAIL
 import com.study.library.gateway.fixture.EXPIRATION_TIME_MS
 import com.study.library.gateway.fixture.SECRET_KEY

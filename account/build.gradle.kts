@@ -20,8 +20,10 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":common"))
-    testImplementation(testFixtures(project(":common")))
+    implementation(project(":core:auth"))
+    implementation(project(":core:exception"))
+    testImplementation(testFixtures(project(":core:auth")))
+    testImplementation(testFixtures(project(":core:exception")))
 
     implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
