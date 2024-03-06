@@ -27,6 +27,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-slf4j")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
+    testImplementation("io.kotest:kotest-runner-junit5:5.7.2")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test")
+    testImplementation("io.projectreactor:reactor-test")
 }
 
 tasks.withType<KotlinCompile> {
