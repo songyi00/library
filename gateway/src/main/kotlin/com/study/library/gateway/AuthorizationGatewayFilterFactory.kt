@@ -1,7 +1,7 @@
 package com.study.library.gateway
 
-import com.study.library.common.auth.JwtTokenManager
-import com.study.library.common.error.ForbiddenException
+import com.study.library.core.auth.auth.JwtTokenManager
+import com.study.library.core.auth.error.ForbiddenException
 import org.springframework.cloud.gateway.filter.GatewayFilter
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory
 import org.springframework.stereotype.Component

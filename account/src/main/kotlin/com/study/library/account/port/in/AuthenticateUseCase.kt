@@ -1,6 +1,6 @@
 package com.study.library.account.port.`in`
 
-import com.study.library.common.auth.JwtToken
+import com.study.library.core.auth.auth.JwtToken
 import jakarta.validation.constraints.Email
 
 interface AuthenticateUseCase {

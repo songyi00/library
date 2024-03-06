@@ -1,7 +1,7 @@
 package com.study.library.account.domain
 
-import com.study.library.common.encrypt.sha256Encrypt
-import com.study.library.common.error.UnAuthenticateException
+import com.study.library.core.auth.encrypt.sha256Encrypt
+import com.study.library.core.auth.error.UnAuthenticateException
 import org.springframework.data.relational.core.mapping.Table
 
 @Table("account")

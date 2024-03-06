@@ -17,15 +17,7 @@
             <option value="$PROJECT_DIR$/core/common" />
             <option value="$PROJECT_DIR$/core/exception" />
             <option value="$PROJECT_DIR$/gateway" />
-          </set>
-        </option>
-      </GradleProjectSettings>
-      <GradleProjectSettings>
-        <option name="externalProjectPath" value="$PROJECT_DIR$/core/armeria" />
-        <option name="gradleJvm" value="17" />
-        <option name="modules">
-          <set>
-            <option value="$PROJECT_DIR$/core/armeria" />
+            <option value="$PROJECT_DIR$/rent" />
           </set>
         </option>
       </GradleProjectSettings>

@@ -742,3 +742,4 @@ gradle-app.setting
 
 !**/mapnik-jni.jar
 .DS_Store
+**/.idea/**

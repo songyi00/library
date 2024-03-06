@@ -1,13 +1,13 @@
 package com.study.library.account.application
 
-import com.study.library.common.annotation.IntegrationTest
 import com.study.library.account.adapter.out.persistence.repository.AccountRepository
 import com.study.library.account.fixture.EMAIL
 import com.study.library.account.fixture.PASSWORD
 import com.study.library.account.fixture.createAccountEntity
 import com.study.library.account.port.`in`.AuthenticateUseCase.AuthenticationData
-import com.study.library.common.error.AccountNotFoundException
-import com.study.library.common.error.UnAuthenticateException
+import com.study.library.core.auth.annotation.IntegrationTest
+import com.study.library.core.auth.error.AccountNotFoundException
+import com.study.library.core.auth.error.UnAuthenticateException
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldNotBe

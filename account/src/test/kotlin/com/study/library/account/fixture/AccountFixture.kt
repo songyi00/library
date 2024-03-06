@@ -2,7 +2,7 @@ package com.study.library.account.fixture
 
 import com.study.library.account.adapter.out.persistence.entity.AccountEntity
 import com.study.library.account.domain.Account
-import com.study.library.common.encrypt.sha256Encrypt
+import com.study.library.core.auth.encrypt.sha256Encrypt
 
 const val EMAIL = "test@test.com"
 const val PASSWORD = "abc"

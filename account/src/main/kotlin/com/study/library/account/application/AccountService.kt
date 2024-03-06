@@ -7,9 +7,9 @@ import com.study.library.account.port.`in`.SignUpUseCase
 import com.study.library.account.port.`in`.SignUpUseCase.AccountData
 import com.study.library.account.port.out.AccountCommandPort
 import com.study.library.account.port.out.AccountQueryPort
-import com.study.library.common.auth.JwtToken
-import com.study.library.common.auth.JwtTokenManager
-import com.study.library.common.error.AccountNotFoundException
+import com.study.library.core.auth.auth.JwtToken
+import com.study.library.core.auth.auth.JwtTokenManager
+import com.study.library.core.auth.error.AccountNotFoundException
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
