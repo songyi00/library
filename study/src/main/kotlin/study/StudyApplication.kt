@@ -1,11 +1,11 @@
-package nexters.armeria
+package study
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ArmeriaApplication
+class StudyApplication
 
 fun main(args: Array<String>) {
-    runApplication<ArmeriaApplication>(*args)
+    runApplication<StudyApplication>(*args)
 }
