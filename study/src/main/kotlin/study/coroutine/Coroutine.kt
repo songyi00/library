@@ -1,6 +1,7 @@
 package nexters.armeria
 
 import kotlinx.coroutines.*
+import kotlinx.coroutines.slf4j.MDCContext
 
 suspend fun threadContextElement() {
     val threadLocal = ThreadLocal.withInitial { "Default" }

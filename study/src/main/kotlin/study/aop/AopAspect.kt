@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component
 
 @Component
 @Aspect
-class AopExample {
+class AopAspect {
 
     @Pointcut("execution(* study.aop.AopService.aop2(..))")
     fun pointcut() {

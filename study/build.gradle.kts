@@ -26,6 +26,18 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-slf4j")
+
+    // armeria
+    implementation(platform("com.linecorp.armeria:armeria-bom:1.27.2"))
+    implementation("com.linecorp.armeria:armeria-kotlin")
+    implementation(platform(platform("io.netty:netty-bom:4.1.106.Final")))
+    implementation("com.linecorp.armeria:armeria-spring-boot3-webflux-starter")
+    implementation("com.linecorp.armeria:armeria-brave")
+//    implementation("com.linecorp.armeria:armeria-kotlin")
+
+    // https://mvnrepository.com/artifact/io.github.microutils/kotlin-logging-jvm
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
+
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("io.projectreactor:reactor-test")
     testImplementation("io.kotest:kotest-runner-junit5:5.7.2")
